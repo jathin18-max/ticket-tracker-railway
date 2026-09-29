@@ -1,17 +1,26 @@
 /* Full page center */
 .login-wrapper {
+  width: 100%;
   min-height: 100vh;
   background-color: #272727;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Card */
+/* Login card */
 .login-card {
   background-color: #323232;
   padding: 40px;
-  width: 350px;
+
+  width: 100%;
+  max-width: 430px;
+  box-sizing: border-box;
+
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   text-align: center;
@@ -31,14 +40,17 @@
 
 /* Inputs */
 .login-card input {
-  width: 90%;
+  width: 100%;
   padding: 12px;
   margin-bottom: 15px;
+
   background-color: #272727;
   border: 1px solid #444;
   border-radius: 6px;
+
   color: #ffffff;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 .login-card input::placeholder {
@@ -54,13 +66,16 @@
 .login-card button {
   width: 100%;
   padding: 12px;
+
   background-color: #d7263d;
   border: none;
   border-radius: 6px;
+
   color: #fff;
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
+
   transition: background 0.3s ease;
 }
 
@@ -90,4 +105,11 @@
 
 .login-footer a:hover {
   text-decoration: underline;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 25px;
+  }
 }
