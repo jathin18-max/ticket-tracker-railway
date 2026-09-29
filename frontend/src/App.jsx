@@ -7,7 +7,7 @@ import Completed from "./pages/completed";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import AdminCompleted from "./pages/Admincompleted";
-import AdminHome from "./pages/adminhome";
+import AdminHome from "./pages/Adminhome";
 import AdminLogin from "./pages/AdminLogin";
 import StartingPage from "./pages/startingPage";
 export default function App() {
