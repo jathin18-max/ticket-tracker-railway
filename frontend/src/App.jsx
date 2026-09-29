@@ -14,13 +14,13 @@ export default function App() {
   const [points, setPoints] = useState(0);
   const [tickets, setTickets] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/show")
+    fetch("https://ticket-tracker-backend-zvvc.onrender.com/show")
       .then(res => res.json())
       .then(tickets => setTickets(tickets));
       //console.log(tickets);
   }, [tickets]);
   useEffect(() => {
-    fetch("http://localhost:5000/show-points")
+    fetch("https://ticket-tracker-backend-zvvc.onrender.com/show-points")
       .then(res => res.json())
       .then(data => setPoints(data));
   }, [tickets]);
