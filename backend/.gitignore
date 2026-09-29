@@ -4,10 +4,20 @@ node_modules/
 # Environment variables and secrets
 .env
 .env.*
-
-# Allow example environment files
 !.env.example
 
 # Local system files
 desktop.ini
 .DS_Store
+
+# Private SSL certificates
+backend/ca.pem
+
+# Uploaded files
+backend/uploads/
+
+# Frontend build files
+frontend/dist/
+
+# Log files
+*.log
