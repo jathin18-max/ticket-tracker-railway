@@ -11,7 +11,7 @@ export default function AdminHome() {
   const [file, setFile] = useState(null);
   async function handlesubmit() {
     try {
-      await fetch("http://localhost:5000/admin-home", {
+      await fetch("https://ticket-tracker-backend-zvvc.onrender.com/admin-home", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export default function AdminHome() {
       if (!file) return alert("Select a file");
       const formData = new FormData();
       formData.append("file", file);
-      await fetch("http://localhost:5000/upload-dev-files", {
+      await fetch("https://ticket-tracker-backend-zvvc.onrender.com/upload-dev-files", {
         method: "POST",
         body: formData,
       });

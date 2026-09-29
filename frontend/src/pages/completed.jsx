@@ -7,7 +7,7 @@ export default function Completed({ points}) {
   const [completed, setCompleted] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/completed")
+    fetch("https://ticket-tracker-backend-zvvc.onrender.com/completed")
       .then(res => res.json())
       .then(data => setCompleted(data));
   }, []);
@@ -28,8 +28,8 @@ export default function Completed({ points}) {
                 <div>Client:<b> {t.client}</b></div>
                 <div>{t.points} pts</div>
                 <div>
-                <button className="submit-btn" onClick={()=>{window.open(`http://localhost:5000/uploads/ticket_${6}.pdf`);}}>Problem</button>
-                <button className="submit-btn" onClick={()=>{window.open(`http://localhost:5000/uploads/developer/ticket_${7}.pdf`);}}>File Report</button>
+                <button className="submit-btn" onClick={()=>{window.open(`https://ticket-tracker-backend-zvvc.onrender.com/uploads/ticket_${6}.pdf`);}}>Problem</button>
+                <button className="submit-btn" onClick={()=>{window.open(`https://ticket-tracker-backend-zvvc.onrender.com/uploads/developer/ticket_${7}.pdf`);}}>File Report</button>
                 </div>
               </div>
               <div className="completed-body">

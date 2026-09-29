@@ -12,7 +12,7 @@ export default function TicketInfo({ tickets, points }) {
   const [file, setFile] = useState(null);
   const getFileUrl = (filePath) => {
     if (!filePath) return null;
-    return `http://localhost:5000/uploads/ticket_${filePath}.pdf`;
+    return `https://ticket-tracker-backend-zvvc.onrender.com/uploads/ticket_${filePath}.pdf`;
   };
   if (!ticket)
     return (
@@ -26,7 +26,7 @@ export default function TicketInfo({ tickets, points }) {
     }
 
     try {
-      await fetch("http://localhost:5000/show-post", {
+      await fetch("https://ticket-tracker-backend-zvvc.onrender.com/show-post", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -40,7 +40,7 @@ export default function TicketInfo({ tickets, points }) {
           solution: desc,
         }),
       });
-      await fetch("http://localhost:5000/show-post", {
+      await fetch("https://ticket-tracker-backend-zvvc.onrender.com/show-post", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -49,7 +49,7 @@ export default function TicketInfo({ tickets, points }) {
           id: ticket.id,
         }),
       });
-      await fetch("http://localhost:5000/show-points", {
+      await fetch("https://ticket-tracker-backend-zvvc.onrender.com/show-points", {
         method: "put",
         headers: {
           "Content-Type": "application/json",
@@ -70,7 +70,7 @@ export default function TicketInfo({ tickets, points }) {
     const formData = new FormData();
     formData.append("file", file);
 
-    await fetch("http://localhost:5000/upload-dev-file", {
+    await fetch("https://ticket-tracker-backend-zvvc.onrender.com/upload-dev-file", {
       method: "POST",
       body: formData,
     });
@@ -94,7 +94,7 @@ export default function TicketInfo({ tickets, points }) {
       <div className="button-group">
         <button
           className="submit-btn"
-          onClick={() => fetch("http://localhost:5000/open-vscode")}
+          onClick={() => fetch("https://ticket-tracker-backend-zvvc.onrender.com/open-vscode")}
         >
           Open Editor
         </button>
