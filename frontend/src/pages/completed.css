@@ -1,0 +1,33 @@
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.completed-item {
+  background: #272727;
+  border: 1px solid #d7263d;
+  padding: 12px;
+  border-radius: 8px;
+  color: #fff;
+}
+.submit-btn{
+  background: #d7263d;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.completed-header {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.completed-body .problem-box {
+  margin-bottom: 8px;
+}
+use this Strcuture to buid 
+
