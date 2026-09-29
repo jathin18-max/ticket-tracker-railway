@@ -1,29 +1,38 @@
-/* Full page center */
+/* Full-screen wrapper */
 .login-wrapper {
-  width: 100%;
-  min-height: 100vh;
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+  min-height: 100dvh;
+
   background-color: #272727;
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
   padding: 20px;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 
-/* Login card */
+/* Login and Register card */
 .login-card {
   background-color: #323232;
-  padding: 40px;
 
   width: 100%;
   max-width: 430px;
+
+  padding: 40px;
   box-sizing: border-box;
 
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+
   text-align: center;
+  margin: auto;
 }
 
 /* Headings */
@@ -38,8 +47,9 @@
   font-size: 16px;
 }
 
-/* Inputs */
+/* Input fields */
 .login-card input {
+  display: block;
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
@@ -71,7 +81,7 @@
   border: none;
   border-radius: 6px;
 
-  color: #fff;
+  color: #ffffff;
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
